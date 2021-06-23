@@ -1,13 +1,29 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.backgroundStyle {
+    background-image: url('./windows-xp-hd.jpg');
+    height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.taskbarStyle {
+    height: 35px;
+    background-color: blue;
+}
+
+.desktopStyle {
+    height: calc(100% - 35px);
+}
+
+.iconContainerStyle {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.iconStyle {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(3, 3, 248, 0.418);
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    ;
 }

@@ -2,7 +2,6 @@ import React, { CSSProperties, FunctionComponent, useState } from 'react';
 import "xp.css/dist/XP.css";
 import { useDrag } from 'react-dnd';
 import { ItemTypes } from './dragTypes';
-import ButtonIcon from './buttonIcon.component';
 
 
 const style :CSSProperties = {
@@ -56,7 +55,7 @@ const Window: FunctionComponent<Props> =(props : Props) => {
         }}
         ref={drag}
         role={'window'}>
-        <div className="window"  style= {{zIndex: 10}}>
+        <div className="window">
           <div className="title-bar">
             <div className="title-bar-text">{props.title}</div>
             <div className="title-bar-controls">
@@ -70,16 +69,12 @@ const Window: FunctionComponent<Props> =(props : Props) => {
           </div>
         </div>
       </div>
-      <div style= {{zIndex: 1}}>
-      <ButtonIcon title={props.title} icon={props.title} open={handleOpenWindow}/>
-      </div>
     </div>
     );
   }
-  else {
+  else {  
     return(
       <div>
-        <ButtonIcon title={props.title} icon={props.title} open={handleOpenWindow}/>
       </div>
     )
   }

@@ -6,7 +6,7 @@ interface Props{
 }
 
 const Content : FunctionComponent<Props> = (props : Props) =>{
-
+  
   if (props.icon === 'Présentation'){
     return(
         <div>
