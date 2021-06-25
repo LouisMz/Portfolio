@@ -1,4 +1,4 @@
-import React, { CSSProperties, FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import  Desktop  from './desktop';
 import Taskbar from './taskbar';
 import './index.css';

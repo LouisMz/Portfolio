@@ -4,8 +4,28 @@
 }
 
 .taskbarStyle {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.taskbarBlue {
+    width: 100%;
     height: 35px;
     background-color: blue;
+    text-align: end;
+    color: white;
+}
+
+.startButton {
+    height: 35px;
+    background-color: green;
+    width: 150px;
+    color: white;
+    font-size: 22px;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    text-align: center;
 }
 
 .desktopStyle {
@@ -21,9 +41,47 @@
 .iconStyle {
     display: flex;
     flex-direction: column;
-    background-color: rgba(3, 3, 248, 0.418);
     height: 50px;
-    width: 50px;
-    margin: 10px;
-    ;
+    width: 75px;
+    margin: 20px;
+    align-items: center;
+}
+
+.iconImg {
+    height: 40px;
+    width: 40px;
+    padding-bottom: 5px;
+}
+
+.homeContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+}
+
+.homeTitle {
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+.homeContent {
+    font-size: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.homeEnd {
+    padding-top: 12px;
+    font-size: 15px;
+}
+
+.presentationContent {
+    display: flex;
+}
+
+.contentText {
+    margin-left: 12px;
+    font-size: 16px;
 }

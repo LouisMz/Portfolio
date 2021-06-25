@@ -1,4 +1,4 @@
-import React, { FunctionComponent, CSSProperties } from "react"
+import React, { FunctionComponent } from "react"
 
 const Taskbar: FunctionComponent = () =>{
 
@@ -7,8 +7,8 @@ const Taskbar: FunctionComponent = () =>{
 
   return(
     <div className="taskbarStyle">
-      <div>{hour}</div>
-      <div>Démarrer</div>
+      <div className="taskbarBlue">{hour}</div>
+      <div className="startButton">Démarrer</div>
     </div>
   )
 }

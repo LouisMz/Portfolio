@@ -9,7 +9,7 @@ const Content : FunctionComponent<Props> = (props : Props) =>{
   
   if (props.icon === 'Présentation'){
     return(
-        <div>
+        <div className="presenation">
           <Presentation/>
         </div>
     );

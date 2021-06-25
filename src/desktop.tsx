@@ -1,4 +1,4 @@
-import React, { CSSProperties, FunctionComponent, useCallback, useState } from 'react';
+import React, { FunctionComponent, useCallback, useEffect, useState } from 'react';
 import Window  from './window.component';
 import update from "immutability-helper";
 import { useDrop, XYCoord } from 'react-dnd';
@@ -7,15 +7,16 @@ import { DragItem } from './interfaces';
 import Content from './content.component';
 import Home from './home.component';
 import ButtonIcon from './buttonIcon.component';
-import Presentation from './img/001-presentation.png';
-import Projet from './img/002-projet.png';
-import Cyber from './img/003-cyber.png';
-import Etude from './img/004-etude.png';
-import Competences from './img/005-competences.png';
-import VeilleTechno from './img/006-veilletechnologique.png';
-import Documentation from './img/007-documentation.png';
-import Contact from './img/008-contact.png';
-import MentionLegale from './img/009-mentionlegale.png';
+import Presentation from './img/Icon/1.png';
+import Projet from './img/Icon/2.png';
+import Cyber from './img/Icon/13.png';
+import Etude from './img/Icon/25.png';
+import Competences from './img/Icon/36.png';
+import VeilleTechno from './img/Icon/38.png';
+import Documentation from './img/Icon/48.png';
+import Contact from './img/Icon/152.png';
+import MentionLegale from './img/Icon/274.png';
+import { servicesVersion } from 'typescript';
 
 interface Props {
   hideSourceOnDrag: boolean;
@@ -23,9 +24,9 @@ interface Props {
 }
 
 const Desktop: FunctionComponent<Props> = (props : Props) => {
+
+  const [visible, setVisible] = useState<{[key: string]: boolean}>({});
   
-
-
   const [windows, setWindows] = useState<{
     [key : string]: {
       top : number;
@@ -71,30 +72,56 @@ const Desktop: FunctionComponent<Props> = (props : Props) => {
     [moveWindow]
   );
 
+  function handleOpenWindow(key : string) {
+    const v = {...visible};
+    v[key] = true;
+    setVisible(v);
+  }
+
+  function handleCloseWindow(key : string) {
+    const v ={...visible};
+    v[key] = false;
+    setVisible(v);
+  }
+
+
+  useEffect(() => {
+    const windowsState: {[key: string]: boolean} = {};
+    Object.keys(windows).forEach(index => windowsState[index] = false)
+    setVisible(windowsState)
+  }, [])
+  
   return(
     <div className="desktopStyle">
       <div ref={drop}>
-        {Object.keys(windows).map((key) =>{
-          const {left, top, title } = windows[key];
-          return(
-            <Window key={key} id={key} left={left} top={top} hideSourceOnDrag={props.hideSourceOnDrag} title={title}>
-              <Content icon={title}/>
+        {Object.keys(windows).map((key) => (
+            visible[key] &&
+              <Window
+              key={key} id={key} 
+              left={windows[key].left} top={windows[key].top} 
+              hideSourceOnDrag={props.hideSourceOnDrag} 
+              title={windows[key].title} 
+              visible={visible[key]}
+              close={() => handleCloseWindow(key)}
+            >
+              <Content icon={windows[key].title}/>
             </Window>
-          )})} 
-      </div>
+            
+        ))}
       <div className="iconContainerStyle">
-        <ButtonIcon src={Presentation} description={'Qui suis-je'} alt={'Icon Présentation'}/>
-        <ButtonIcon src={Projet} description={'Mes Projets'} alt={'Icon Projet'}/>
-        <ButtonIcon src={Cyber} description={'Cybersécurité'} alt={'Icon Cybersécurité'}/>
-        <ButtonIcon src={Etude} description={'Etudes'} alt={'Icon Etudes'}/>
-        <ButtonIcon src={Competences} description={'Compétences'} alt={'Icon Compétences'}/>
-        <ButtonIcon src={VeilleTechno} description={'Veille Techno'} alt={'Icon VeilleTechno'}/>
-        <ButtonIcon src={Documentation} description={'Documention'} alt={'Icon Documentation'}/>
-        <ButtonIcon src={Contact} description={'Contact'} alt={'Icon Contact'}/>
-        <ButtonIcon src={MentionLegale} description={'MentionLegale'} alt={'Icon Mention Légale'}/>
+        <ButtonIcon src={Presentation} description={'Qui suis-je'} alt={'Icon Présentation'} open={() => handleOpenWindow('a')}/>
+        <ButtonIcon src={Projet} description={'Mes Projets'} alt={'Icon Projet'} open={() => handleOpenWindow('b')}/>
+        <ButtonIcon src={Cyber} description={'Cybersécurité'} alt={'Icon Cybersécurité'} open={() => handleOpenWindow('c')}/>
+        <ButtonIcon src={Etude} description={'Etudes'} alt={'Icon Etudes'} open={() => handleOpenWindow('d')}/>
+        <ButtonIcon src={Competences} description={'Compétences'} alt={'Icon Compétences'} open={() => handleOpenWindow('e')}/>
+        <ButtonIcon src={VeilleTechno} description={'Veille Techno'} alt={'Icon VeilleTechno'} open={() => handleOpenWindow('f')}/>
+        <ButtonIcon src={Documentation} description={'Documention'} alt={'Icon Documentation'} open={() => handleOpenWindow('g')}/>
+        <ButtonIcon src={Contact} description={'Contact'} alt={'Icon Contact'} open={() => handleOpenWindow('h')}/>
+        <ButtonIcon src={MentionLegale} description={'MentionLegale'} alt={'Icon Mention Légale'} open={() =>handleOpenWindow('i')}/>
       </div>
-      <div>
+      <div className="homeContainer">
         <Home/>
+      </div>
       </div>
     </div>
   );
