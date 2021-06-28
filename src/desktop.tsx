@@ -37,7 +37,6 @@ const Desktop: FunctionComponent<Props> = (props : Props) => {
     a: { top: 20, left: 80, title: "Présentation" },
     b: { top: 50, left: 110, title: "Projets" },
     c: { top: 80, left: 140, title: "Cyber"},
-    d: { top : 110, left: 170, title: "Etudes"},
     e: { top : 110, left: 170, title: "Compétences"},
     f: { top : 110, left: 170, title: "Veille Technologique"},
     g: { top : 110, left: 170, title: "Documentation"},
@@ -112,7 +111,6 @@ const Desktop: FunctionComponent<Props> = (props : Props) => {
         <ButtonIcon src={Presentation} description={'Qui suis-je'} alt={'Icon Présentation'} open={() => handleOpenWindow('a')}/>
         <ButtonIcon src={Projet} description={'Mes Projets'} alt={'Icon Projet'} open={() => handleOpenWindow('b')}/>
         <ButtonIcon src={Cyber} description={'Cybersécurité'} alt={'Icon Cybersécurité'} open={() => handleOpenWindow('c')}/>
-        <ButtonIcon src={Etude} description={'Etudes'} alt={'Icon Etudes'} open={() => handleOpenWindow('d')}/>
         <ButtonIcon src={Competences} description={'Compétences'} alt={'Icon Compétences'} open={() => handleOpenWindow('e')}/>
         <ButtonIcon src={VeilleTechno} description={'Veille Techno'} alt={'Icon VeilleTechno'} open={() => handleOpenWindow('f')}/>
         <ButtonIcon src={Documentation} description={'Documention'} alt={'Icon Documentation'} open={() => handleOpenWindow('g')}/>
