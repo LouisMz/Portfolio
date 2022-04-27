@@ -1,4 +1,6 @@
 import React, { FunctionComponent } from "react"
+import StartButton from '../img/startButton.png';
+
 
 const Taskbar: React.FC = () =>{
 
@@ -7,8 +9,7 @@ const Taskbar: React.FC = () =>{
 
   return(
     <div className="taskbarStyle">
-      <div className="taskbarBlue">{hour}</div>
-      <div className="startButton">Démarrer</div>
+      <img src={StartButton} alt='Button start' />
     </div>
   )
 }

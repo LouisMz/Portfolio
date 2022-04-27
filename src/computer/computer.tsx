@@ -1,14 +1,14 @@
 import React, { FunctionComponent, useState } from 'react';
-import  Desktop  from '../desktop';
+import  Desktop  from '../desktop/desktop';
 import Taskbar from '../taskbar/taskbar';
-import './index.css';
+import '../index.css';
 
-const Computer: React.FC = () =>{
+const Computer: React.FC = () => {
   const [hideSourceOnDrag] = useState(true)
 
   return (
     <div className="backgroundStyle">
-        <Desktop hideSourceOnDrag={hideSourceOnDrag} /> 
+        <Desktop hideSourceOnDrag={hideSourceOnDrag} />
         <Taskbar/>
     </div>
   )

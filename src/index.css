@@ -6,7 +6,7 @@
 .taskbarStyle {
     display: flex;
     width: 100%;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 
 .taskbarBlue {
@@ -14,7 +14,6 @@
     height: 35px;
     background-color: blue;
     text-align: end;
-    color: white;
 }
 
 .startButton {

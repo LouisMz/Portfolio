@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import PhotoProfil from './img/PP.jpg'
+import PhotoProfil from '../../img/PP.jpg';
 
 const Presentation : React.FC = () =>{
 

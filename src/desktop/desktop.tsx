@@ -1,12 +1,12 @@
 import React, { FunctionComponent, useCallback, useEffect, useState } from 'react';
-import Window  from './windows/window.component';
+import Window  from '../windows/window.component';
 import update from "immutability-helper";
 import { useDrop, XYCoord } from 'react-dnd';
-import { ItemTypes } from './dragType/dragTypes';
-import { DragItem } from './interface/interfaces';
-import Content from './windows/component/content.component';
-import Home from './windows/home.component';
-import ButtonIcon from './components/buttonIcon.component';
+import { ItemTypes } from '../dragType/dragTypes';
+import { DragItem } from '../interface/interfaces';
+import Content from '../windows/component/content.component';
+import Home from '../windows/home.component';
+import ButtonIcon from '../components/buttonIcon.component';
 import Presentation from './img/Icon/1.png';
 import Projet from './img/Icon/2.png';
 import Cyber from './img/Icon/13.png';
@@ -16,14 +16,13 @@ import VeilleTechno from './img/Icon/38.png';
 import Documentation from './img/Icon/48.png';
 import Contact from './img/Icon/152.png';
 import MentionLegale from './img/Icon/274.png';
-import { servicesVersion } from 'typescript';
 
 interface Props {
   hideSourceOnDrag: boolean;
   windows?: { [key: string]: { top: number; left: number; title: string; }};
 }
 
-const Desktop: FunctionComponent<Props> = (props : Props) => {
+const Desktop: FunctionComponent <Props> = (props : Props) => {
 
   const [visible, setVisible] = useState<{[key: string]: boolean}>({});
   
