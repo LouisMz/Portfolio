@@ -1,12 +1,12 @@
 import React, { FunctionComponent, useCallback, useEffect, useState } from 'react';
-import Window  from './window.component';
+import Window  from './windows/window.component';
 import update from "immutability-helper";
 import { useDrop, XYCoord } from 'react-dnd';
-import { ItemTypes } from './dragTypes';
-import { DragItem } from './interfaces';
-import Content from './content.component';
-import Home from './home.component';
-import ButtonIcon from './buttonIcon.component';
+import { ItemTypes } from './dragType/dragTypes';
+import { DragItem } from './interface/interfaces';
+import Content from './windows/component/content.component';
+import Home from './windows/home.component';
+import ButtonIcon from './components/buttonIcon.component';
 import Presentation from './img/Icon/1.png';
 import Projet from './img/Icon/2.png';
 import Cyber from './img/Icon/13.png';

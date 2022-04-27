@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-const Veille : FunctionComponent = () =>{
+const Veille : React.FC = () =>{
 
     return (
         <div className ="contentTitle">

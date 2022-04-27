@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-const Projet : FunctionComponent = () =>{
+const Projet : React.FC = () =>{
     
     return(
         <div>

@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-const Competence : FunctionComponent = () =>{
+const Competence : React.FC = () =>{
 
     return (
         <div className ="contentTitle">

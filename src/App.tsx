@@ -1,5 +1,5 @@
 import React from 'react';
-import Computer  from './computer';
+import Computer  from './computer/computer';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { DndProvider } from 'react-dnd';
 

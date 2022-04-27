@@ -1,9 +1,9 @@
 import React, { FunctionComponent, useState } from 'react';
-import  Desktop  from './desktop';
-import Taskbar from './taskbar';
+import  Desktop  from '../desktop';
+import Taskbar from '../taskbar/taskbar';
 import './index.css';
 
-const Computer: FunctionComponent = () =>{
+const Computer: React.FC = () =>{
   const [hideSourceOnDrag] = useState(true)
 
   return (

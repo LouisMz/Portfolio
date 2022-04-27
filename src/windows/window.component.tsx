@@ -1,7 +1,7 @@
 import React, { CSSProperties, Fragment, FunctionComponent, useEffect, useState } from 'react';
 import "xp.css/dist/XP.css";
 import { useDrag } from 'react-dnd';
-import { ItemTypes } from './dragTypes';
+import { ItemTypes } from '../dragType/dragTypes';
 
 
 const style :CSSProperties = {
@@ -21,7 +21,7 @@ interface Props {
   close: () => void;
 }
 
-const Window: FunctionComponent<Props> =(props : Props) => {
+const Window: React.FC<Props> = (props : Props) => {
   
   const [{ isDragging }, drag] = useDrag(() => ({
       type: ItemTypes.WINDOW,

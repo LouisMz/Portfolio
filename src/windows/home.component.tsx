@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from "react";
 
-const Home : FunctionComponent = () =>{
+const Home : React.FC = () =>{
 
     const [visible, setVisible] = useState<boolean>(true);
 

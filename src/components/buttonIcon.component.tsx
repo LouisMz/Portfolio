@@ -8,7 +8,7 @@ interface Props{
 }
 
 
-const ButtonIcon: FunctionComponent<Props> = (props : Props) =>{
+const ButtonIcon: React.FC<Props> = (props : Props) => {
 
     return(
         <div className="iconStyle" onDoubleClick={ () => props.open()}>

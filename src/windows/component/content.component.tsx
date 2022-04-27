@@ -12,7 +12,7 @@ interface Props{
   icon: string;
 }
 
-const Content : FunctionComponent<Props> = (props : Props) =>{
+const Content : React.FC <Props> = (props : Props) =>{
   
   if (props.icon === 'Présentation'){
     return(

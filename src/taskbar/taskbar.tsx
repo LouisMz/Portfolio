@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react"
 
-const Taskbar: FunctionComponent = () =>{
+const Taskbar: React.FC = () =>{
 
   let date = new Date();
   let hour = date.getHours()+" : "+date.getMinutes();

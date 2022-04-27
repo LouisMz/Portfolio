@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import PhotoProfil from './img/PP.jpg'
 
-const Presentation : FunctionComponent = () =>{
+const Presentation : React.FC = () =>{
 
     return (
         <div className ="presentationContent">
