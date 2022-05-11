@@ -7,15 +7,15 @@ import { DragItem } from '../interface/interfaces';
 import Content from '../windows/component/content.component';
 import Home from '../windows/home.component';
 import ButtonIcon from '../components/buttonIcon.component';
-import Presentation from './img/Icon/1.png';
-import Projet from './img/Icon/2.png';
-import Cyber from './img/Icon/13.png';
-import Etude from './img/Icon/25.png';
-import Competences from './img/Icon/36.png';
-import VeilleTechno from './img/Icon/38.png';
-import Documentation from './img/Icon/48.png';
-import Contact from './img/Icon/152.png';
-import MentionLegale from './img/Icon/274.png';
+import Presentation from '../img/Icon/1.png';
+import Projet from '../img/Icon/2.png';
+import Cyber from '../img/Icon/13.png';
+import Etude from '../img/Icon/25.png';
+import Competences from '../img/Icon/36.png';
+import VeilleTechno from '../img/Icon/38.png';
+import Documentation from '../img/Icon/48.png';
+import Contact from '../img/Icon/152.png';
+import MentionLegale from '../img/Icon/274.png';
 
 interface Props {
   hideSourceOnDrag: boolean;
