@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Window  from '../windows/window.component';
 import update from "immutability-helper";
 import { useDrop, XYCoord } from 'react-dnd';
@@ -10,7 +10,6 @@ import ButtonIcon from '../components/buttonIcon.component';
 import Presentation from '../img/Icon/1.png';
 import Projet from '../img/Icon/2.png';
 import Cyber from '../img/Icon/13.png';
-import Etude from '../img/Icon/25.png';
 import Competences from '../img/Icon/36.png';
 import VeilleTechno from '../img/Icon/38.png';
 import Documentation from '../img/Icon/48.png';
@@ -22,7 +21,7 @@ interface Props {
   windows?: { [key: string]: { top: number; left: number; title: string; }};
 }
 
-const Desktop: FunctionComponent <Props> = (props : Props) => {
+const Desktop: React.FC <Props> = (props : Props) => {
 
   const [visible, setVisible] = useState<{[key: string]: boolean}>({});
   
